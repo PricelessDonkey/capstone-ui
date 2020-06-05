@@ -6,35 +6,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cuprum&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+       </style>
     </head>
     <body>
         <header>
             <h1>
-                Travel Planner
+                Trip Planner
             </h1>
         </header>
         <form onsubmit="return Client.handleSubmit(event)">
-            <section class="fields">
                 <section class="form-field">
                     <label for="where">Where?</label>
                     <input id="where" type="text" name="input" value="" placeholder="Enter a city">
                 </section>
                 <section class="form-field">
-                    <label for="when">When?</label>
-                    <input id="when" type="date" name="input" value="">
+                    <label for="depart">Depart?</label>
+                    <input id="depart" type="date" name="input" value="">
                 </section>
-            </section>
-            <input type="submit" class="submit-button" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <section class="form-field">
+                    <label for="return">Return?</label>
+                    <input id="return" type="date" name="input" value="">
+                </section>
+                <section class="form-field">
+                    <input type="submit" class="submit-button" value="Let's go!" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </section>
         </form>
         <section class="trip">
             <section class="image">
-                <h3> image placeholder</h3>
+                <img src="placeholder.png" alt="Girl in a jacket" width="360" height="240">
             </section>
             <section class="info">
-                <h2>Your trip to: Mozambique</h2>
-                <h2>Leavin' on July 4th, 2020</h2>
-                <h3>Your trip is in 32 days!</h3>
-                <h4>Typical weather for then is: Highs around 85 degrees, with lows around 74 degrees</h4>
+                <div class="trip-info">
+                    <h2 id="trip-to">Ahh, 10 days in Mozambique...</h2>
+                    <h2 id="leavin-on">Leavin' on July 4th, 2020?</h2>
+                </div>
+                <h3 id="countdown">That's in 32 days!</h3>
+                <h4 id="typical-weather">Typically the high's around 85 degrees and the lows around 74 degrees... nice!</h4>
             </section>
         </section>
         <footer class="footer">
